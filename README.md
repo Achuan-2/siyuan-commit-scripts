@@ -127,7 +127,7 @@ echo -e "\e[1;34m\npushed to bazaar over\n\e[0m"
 
 ## main.sh
 
-最后，main.sh 就是直接跑三个脚本了
+最后，main.sh 就是直接跑三个脚本啦
 
 ```bash
 #!/bin/bash
