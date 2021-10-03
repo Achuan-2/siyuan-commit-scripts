@@ -22,7 +22,7 @@ shell script for siyuan bazzar commit
 
 先展示下我的工作区，工作区就在 conf/themes, 我把 bazaar 和自己的主题 repo 都 clone 到了 themes 文件内，后面脚本都是按照这个文件编排来的，当然你可以根据自己的需要修改脚本。
 
-![image.png](assets/image-20211003172929-j07z3ng.png)
+![](assets/README_2021-10-03-17-39-31.png)
 
 接下来简要介绍下我的脚本
 
