@@ -1,14 +1,13 @@
 # siyuan-commit-scripts
-shell script for siyuan bazzar commit
 
 > update_time：2021-10-03 17:38 Sun
 
-由于我目前在思源笔记集市需要维护思源四个主题，且每次更新基本是需要同时更新四个主题的，如果按手动的方法，我需要
+由于我目前在思源笔记集市需要维护四个主题，且每次更新基本是需要同时更新四个主题的，如果按手动的方法，我需要
 
 1. 先把修改提交到自己的主题 repo，push 到 github
 2. 一个主题一个主题复制 40 位的 commit SHA-1 码，一个个修改 bazaar 里的 themes.json
 
-这样维护主题起来就很麻烦了，而且每次提交我害怕把不同主题的 SHA-1 搞混，还需要校对一下。
+这样维护主题起来就很麻烦了，而且每次提交我害怕把不同主题的 SHA-1 搞混搞漏，还需要校对一下。
 
 无奈，正好最近在接触 shell 脚本，就打算用 shell 写一个自动化提交到集市的脚本
 
@@ -18,9 +17,9 @@ shell script for siyuan bazzar commit
 2. 各个主题生成 SHA-1 码，生成一个 temp.json 文件，这样我可以直接把生成的 json 内容手动替换 bazaar 的 json，这样也不错。
 3. 要是可以一步到位，直接修改 bazaar 中 json 内对应我 repo 的文字内容，直接提交就好啦。这样我只负责修改主题，主题一修改好，确定没问题，直接运行脚本就好。
 
-结果看起来还不错
+结果嘛……看起来还不错
 
-先展示下我的工作区，工作区就在 conf/themes, 我把 bazaar 和自己的主题 repo 都 clone 到了 themes 文件内，后面脚本都是按照这个文件编排来的，当然你可以根据自己的需要修改脚本。
+先展示下我的工作区，工作区就在 conf/themes, 我把 bazaar 和自己的主题 repo 都 clone 到了 themes 文件内，后面脚本都是按照这个文件目录编排来的，当然你可以根据自己的需要修改脚本。
 
 ![](assets/README_2021-10-03-17-39-31.png)
 
