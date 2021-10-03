@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "\e[1;31m\nRun 1_repo_commit.sh\n\e[0m" 
 cd ../
 HOME=`pwd`

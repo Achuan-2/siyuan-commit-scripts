@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # set commit message
 message=":lipstick: Update Tsundoku v0.8.7"
 
