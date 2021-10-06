@@ -6,7 +6,7 @@ cd ../
 HOME=`pwd`
 
 # generate json
-echo -e "\e[1;36m\ntemp.json.json started generating\n\e[0m"
+echo -e "\e[1;36m\n$THEME temp.json.json started generating\n\e[0m"
 echo "" > ${HOME}/temp.json
 echo -e "{ \n    \"repos\": [" >> ${HOME}/temp.json
 
@@ -24,4 +24,4 @@ done >> ${HOME}/temp.json
 echo -e "    ] \n}" >> ${HOME}/temp.json
 
 # info
-echo -e "\e[1;36m\ntemp.json.json generated successfully\n\e[0m"
+echo -e "\e[1;36m\n$THEME temp.json.json generated successfully\n\e[0m"

@@ -1,6 +1,6 @@
 #!/bin/bash
 # set commit message
-message=":lipstick: Update Tsundoku v0.8.7"
+message=":lipstick: Update $THEME $version"
 
 # set path
 cd ..
@@ -32,5 +32,5 @@ done
 cd ${BAZAAR}
 git add -A
 git commit -m "${message}"
-git push
+git push origin main
 echo -e "\e[1;34m\npushed to bazaar over\n\e[0m"
