@@ -3,7 +3,7 @@ echo -e "\e[1;31m\nRun 1_repo_commit.sh\n\e[0m"
 cd ../
 
 HOME=`pwd`
-message=":bookmark: $version 块折叠优化"
+message=":bookmark: $version $update_content"
 echo $message
 find ${HOME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
     do  
