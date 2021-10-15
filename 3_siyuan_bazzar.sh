@@ -28,7 +28,7 @@ find ${HOME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
 done 
 
 
-# git commit and push 
+git commit and push 
 cd ${BAZAAR}
 git add -A
 git commit -m "${message}"
