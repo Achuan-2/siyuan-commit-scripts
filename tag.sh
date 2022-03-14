@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e "\e[1;31m\nRun tag.sh\n\e[0m" 
-VERSION="v1.1.2"
+VERSION="v1.1.4"
 cd ../
 
 HOME=`pwd`

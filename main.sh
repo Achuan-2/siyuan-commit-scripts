@@ -5,7 +5,9 @@ export THEME="Tsundoku"
 # :bookmark: v1.1.2
 # :sparkles: 更新插件
 # :art: [theme.css] reorganize
-export message=":art: [theme.css] reorganize"
+# :bug: 修复代码块行号适配问题
+# :memo:
+export message=":memo: Readme"
 
 #--！----------------------#
 bash ./1_repo_commit.sh
