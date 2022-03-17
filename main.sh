@@ -7,7 +7,7 @@ export THEME="Tsundoku"
 # :art: [theme.css] reorganize
 # :bug: 修复代码块行号适配问题
 # :memo:
-export message=":memo: Readme"
+export message=":memo: [docs] update readme"
 
 #--！----------------------#
 bash ./1_repo_commit.sh
