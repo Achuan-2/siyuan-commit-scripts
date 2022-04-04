@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# into the upper folder
 SCRIPTS=`pwd`
 
+# into the upper folder
 cd ../
 
 THEME=`pwd`

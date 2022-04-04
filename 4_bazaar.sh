@@ -1,21 +1,25 @@
 #!/bin/bash
 # set commit message
-export THEME="Tsundoku"
-message=":lipstick: Update $THEME $version"
+
+message="Update ${THEME} ${VERSION}"
 # set path
 cd ..
 BAZAAR=`pwd`/bazaar
-HOME=`pwd`
+THEME=`pwd`
 
 
 # update remote repo to local
 cd ${BAZAAR}
+
+# update local repo from fork repo
 git restore .
-git pull
+git fetch fork
+git reset --hard fork/main
+
 
 # change bazaar json
 echo -e "\e[1;34m\nchanging theme.json in bazaar\n\e[0m"
-find ${HOME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
+find ${THEME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
     do  
         cd $repo
         # rexp: (?<=exp) match after the exp
@@ -28,9 +32,9 @@ find ${HOME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
 done 
 
 
-git commit and push 
+# git commit and push 
 cd ${BAZAAR}
 git add -A
 git commit -m "${message}"
-git push origin main
+git push -f
 echo -e "\e[1;34m\npushed to bazaar over\n\e[0m"
