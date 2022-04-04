@@ -28,7 +28,7 @@ export VERSION="v1.2.1"
 
 #----------4.提交到bazzar--------------#
 export THEME="Tsundoku"
-# bash ./4_bazaar.sh
+bash ./4_bazaar.sh
 
-#----------5.提交到bazzar--------------#
-#自行前往https://github.com/Achuan-2/siyuan-commit-scripts pull request
+
+#自行前往https://github.com/Achuan-2/bazaar pull request

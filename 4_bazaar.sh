@@ -37,4 +37,6 @@ cd ${BAZAAR}
 git add -A
 git commit -m "${message}"
 git push -f
+sha1=`git rev-parse HEAD`
+git request-pull $sha1  https://github.com/siyuan-note/bazaar.git
 echo -e "\e[1;34m\npushed to bazaar over\n\e[0m"
