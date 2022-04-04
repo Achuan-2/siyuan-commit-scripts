@@ -1,6 +1,6 @@
 #!/bin/bash
 main() {
-    VERSION="v1.1.6"
+    VERSION="v1.2.1"
     # delete_tag
     add_tag
 }

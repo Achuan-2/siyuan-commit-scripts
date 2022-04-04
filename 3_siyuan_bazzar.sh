@@ -1,7 +1,7 @@
 #!/bin/bash
 # set commit message
+export THEME="Tsundoku"
 message=":lipstick: Update $THEME $version"
-
 # set path
 cd ..
 BAZAAR=`pwd`/bazaar
