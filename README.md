@@ -91,7 +91,7 @@ echo -e "\e[1;36m\n${SCRIPTS}/temp.json.json generated successfully\n\e[0m"
 
 ## siyuan_bazaar.sh
 
-对应第三点需求，先fork https://github.com/siyuan-note/bazaar，然后clone放到themes文件夹下
+对应第三点需求，先fork 【siyuan_bazaar](https://github.com/siyuan-note/bazaar)，然后clone放到themes文件夹下
 
 直接修改 fork来的bazaar 中自己 repo 的对应行内容，先同步bazaar的内容覆盖本地repo，然后再提交修改强制 push 到 Github。这样只需要打开自己fork来的repo，点击pull request就可以了
 
