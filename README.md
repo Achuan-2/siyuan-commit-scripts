@@ -1,6 +1,6 @@
 # siyuan-commit-scripts
 - create_time: 2021-10-03 Sun
-- update_time：2022.04.04  Mon
+- update_time：2022.04.05  Tue
 
 
 由于我目前在思源笔记集市需要维护四个主题，且每次更新基本是需要同时更新四个主题的，如果按手动的方法，我需要
@@ -68,8 +68,8 @@ THEME=`pwd`
 # generate json
 echo -e "\e[1;36m\n$THEME temp.json.json started generating\n\e[0m"
 echo "" > ${SCRIPTS}/temp.json
-echo -e "{ \n    \"repos\": [" >> ${SCRIPTS}/temp.json
-
+echo -e "{ \n\t\"repos\": [" >> ${SCRIPTS}/temp.json
+echo -e "\t\"start\"," >> ${SCRIPTS}/temp.json
 # find + absolute path -> return absolute path
 find ${THEME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
     do  
@@ -77,15 +77,14 @@ find ${THEME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
         # rexp: (?<=exp) match after the exp
         # grep : -P use regular expression，-o print the matched parts
         # git rev-parse HEAD -> get the latest SHA-1
-        git remote -v | tail -n 1 | grep -P "(?<=github.com\/)[^\.]+" -o | xargs -i echo "    \"{}@`git rev-parse HEAD`\","  
+        git remote -v | tail -n 1 | grep -P "(?<=github.com\/)[^\.]+" -o | xargs -i echo -e "\t\"{}@`git rev-parse HEAD`\","  
 
 done >> ${SCRIPTS}/temp.json 
-
-echo -e "    ] \n}" >> ${SCRIPTS}/temp.json
+echo -e "\t\"end\"" >> ${SCRIPTS}/temp.json
+echo -e "\t]\n}" >> ${SCRIPTS}/temp.json
 
 # info
 echo -e "\e[1;36m\n${SCRIPTS}/temp.json.json generated successfully\n\e[0m"
-
 
 ```
 
