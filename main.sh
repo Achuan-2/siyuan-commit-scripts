@@ -1,7 +1,11 @@
 #!/bin/bash
 
-#-------commit message----------------#
-<<COMMENT
+SCRIPTS=`pwd`
+#---------1.commit--------------#
+export message=":bookmark: v1.2.2"
+# bash ${SCRIPT}/1_repo_commit.sh
+
+<<commit_message
 :lipstick: 美化样式
 :bookmark: v版本号
 :sparkles: 功能更新
@@ -9,18 +13,15 @@
 :bug: fix bug
 :memo: docs改进
 :pencil: 错别字
-COMMENT
+commit_message
 
-#---------1.commit--------------#
-# export message=":bookmark: v1.2.1"
-# bash ./1_repo_commit.sh
 
 #---------2.get_sha1--------------#
-bash ./2_get_sha1.sh
+bash ${SCRIPT}/2_get_sha1.sh
 
 #----------3.打标签--------------#
-source ./3_tag.sh
-export VERSION="v1.2.1"
+source ${SCRIPT}/3_tag.sh
+export VERSION="v1.2.2"
 # 删除标签
 # delete_tag $VERSION
 # 添加标签
@@ -28,7 +29,7 @@ export VERSION="v1.2.1"
 
 #----------4.提交到bazzar--------------#
 export THEME="Tsundoku"
-bash ./4_bazaar.sh
+bash ${SCRIPT}/4_bazaar.sh
 
 
 #自行前往https://github.com/Achuan-2/bazaar pull request
