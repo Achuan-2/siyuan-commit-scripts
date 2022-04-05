@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SCRIPTS=`pwd`
+SCRIPT=`pwd`
 #---------1.commit--------------#
-export message=":bookmark: v1.2.2"
-# bash ${SCRIPT}/1_repo_commit.sh
+export message=":lipstick:"
+bash ${SCRIPT}/1_repo_commit.sh
 
 <<commit_message
 :lipstick: 美化样式
