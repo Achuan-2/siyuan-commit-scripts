@@ -1,35 +1,31 @@
 #!/bin/bash
 
 SCRIPT=`pwd`
-#---------1.commit--------------#
-export message=":lipstick: 完善页签"
-bash ${SCRIPT}/1_repo_commit.sh
-
-<<commit_message
-:lipstick: 美化样式
-:bookmark: v版本号
-:sparkles: 功能更新
-:art: reorganize
-:bug: fix bug
-:memo: docs改进
-:pencil: 错别字
-commit_message
 
 
-#---------2.get_sha1--------------#
-bash ${SCRIPT}/2_get_sha1.sh
+run(){
+    ####主题日常 commit####
+    # message=":bookmark: v1.2.4"
+    # commit
 
-#----------3.打标签--------------#
-source ${SCRIPT}/3_tag.sh
-export VERSION="v1.2.2"
-# 删除标签
-# delete_tag $VERSION
-# 添加标签
-# add_tag $VERSION
+    ####上交到集市####
+    VERSION="v1.2.4"
+    release
+}
+release() {
+    source ${SCRIPT}/3_tag.sh
+    # 添加标签
+    # add_tag $1
+    # 发布到集市
+    cd  ${SCRIPT}
+    bash ${SCRIPT}/4_bazaar.sh $VERSION
 
-#----------4.提交到bazzar--------------#
-export THEME="Tsundoku"
-bash ${SCRIPT}/4_bazaar.sh
+    #自行前往https://github.com/Achuan-2/bazaar pull request
+}
+commit() {
+    #---------1.commit--------------#
+    bash ${SCRIPT}/1_repo_commit.sh $message
 
 
-#自行前往https://github.com/Achuan-2/bazaar pull request
+}
+run

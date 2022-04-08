@@ -1,7 +1,7 @@
 #!/bin/bash
 # set commit message
-
-message="Update ${THEME} ${VERSION}"
+THEME="Tsundoku"
+message="Update ${THEME} ${1}"
 # set path
 cd ..
 BAZAAR=`pwd`/bazaar
