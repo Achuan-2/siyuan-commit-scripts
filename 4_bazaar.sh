@@ -19,9 +19,9 @@ git reset --hard fork/main
 
 # change bazaar json
 echo -e "\e[1;34m\nchanging theme.json in bazaar\n\e[0m"
-find ${THEME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
+find ${THEME} -maxdepth 1 -type d -name "Tsundoku*" | while read repo;
     do  
-        cd $repo
+        cd "$repo"
         # rexp: (?<=exp) match after the exp
         # grep : -P use regular expression，-o print the matched parts
         name=`git remote -v | tail -n 1 | grep -P "(?<=github.com\/)[^\.]+" -o`

@@ -8,10 +8,10 @@ add_tag() {
 
     THEME=`pwd`
     echo $message
-    find ${THEME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
+    find ${THEME} -maxdepth 1 -type d -name "Tsundoku*" | while read repo;
         do  
             echo -e "\e[1;31mTagging\e[0m" $repo
-            cd $repo
+            cd "$repo"
             echo `pwd`
             git tag $1
             git push origin --tags

@@ -13,9 +13,9 @@ echo "" > ${SCRIPTS}/temp.json
 echo -e "{ \n\t\"repos\": [" >> ${SCRIPTS}/temp.json
 echo -e "\t\"start\"," >> ${SCRIPTS}/temp.json
 # find + absolute path -> return absolute path
-find ${THEME} -maxdepth 1 -type d -name "siyuan-themes*" | while read repo;
+find ${THEME} -maxdepth 1 -type d -name "Tsundoku*" | while read repo;
     do  
-        cd $repo
+        cd "$repo"
         # rexp: (?<=exp) match after the exp
         # grep : -P use regular expression，-o print the matched parts
         # git rev-parse HEAD -> get the latest SHA-1
